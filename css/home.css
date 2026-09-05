@@ -1,0 +1,68 @@
+/* ==========================================================================
+   시안 8-2 - 시안 8(Trust & People)을 기반으로 한 밝은 팀 중심 비교안
+   ../v8/style.css를 먼저 불러온 뒤 이 파일에서 차이점만 덮어씁니다.
+   ========================================================================== */
+
+/* 0818 요청: 메인 첫 장면을 젊고 밝은 팀 이미지로 교체 */
+.v8-2 .v8-hero .slide-1 {
+  background-image:
+    linear-gradient(90deg, rgba(16, 43, 69, .94), rgba(16, 43, 69, .30)),
+    url("../assets/img/design09-people-bright-mixed.png");
+  background-position: center, 54% center;
+}
+.v8-2 .v8-hero .slide-2 {
+  background-image:
+    linear-gradient(90deg, rgba(16, 43, 69, .92), rgba(16, 43, 69, .24)),
+    url("../assets/img/design08-women-hero-02.png");
+}
+.v8-2 .v8-hero .slide-3 {
+  background-image:
+    linear-gradient(90deg, rgba(16, 43, 69, .92), rgba(16, 43, 69, .24)),
+    url("../assets/img/design08-women-hero-03.png");
+}
+.v8-2 .v8-hero::after {
+  background: linear-gradient(90deg, var(--v8-navy) 0 42%, rgba(16, 43, 69, .7) 58%, transparent 78%);
+}
+
+/* 네이비 원 안의 라인 아이콘은 흰색으로 통일해 대비를 확보 */
+.v8-2 .value-mark,
+.v8-2 .value-mark svg { color: #fff; stroke: #fff; }
+.v8-2 .value:hover .value-mark { background: var(--v8-navy); }
+.v8-2 .value:hover .value-mark svg { color: #fff; stroke: #fff; }
+.v8-2 .process-grid b { background: var(--v8-navy); border-color: var(--v8-gold); }
+.v8-2 .process-grid b svg { color: #fff; stroke: #fff; }
+.v8-2 .process-grid > div:nth-child(n) b::before { content: none; }
+
+/* 고객사 수정: 악수 장면을 유지하며 여성 인물들의 외모를 구분한 이미지 */
+.v8-2 .people-photo {
+  background-image: url("../assets/img/design08-people-distinct.png");
+  background-position: center;
+}
+
+/* 전달받은 엑셀 양식 두 개를 메인에서도 바로 찾을 수 있게 구성 */
+.v8-support { padding: 125px 0; background: #fff; }
+.support-heading { display: grid; grid-template-columns: .45fr 1.1fr .75fr; gap: 48px; align-items: start; }
+.support-heading h2 { color: var(--v8-navy); font-size: clamp(38px, 4.5vw, 58px); line-height: 1.16; letter-spacing: -.05em; }
+.support-heading > p:last-child { color: #65717a; line-height: 1.9; }
+.support-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 58px; }
+.support-card { padding: 38px; border: 1px solid #d8d2c6; border-top: 4px solid var(--v8-gold); background: #faf9f6; }
+.support-card > p { color: var(--v8-blue); font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.support-card h3 { margin: 15px 0 12px; color: var(--v8-navy); font-size: 27px; }
+.support-card > span { display: block; min-height: 48px; color: #6d767d; font-size: 14px; line-height: 1.7; }
+.support-card > div { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.support-card a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 17px; border: 1px solid var(--v8-navy); color: var(--v8-navy); font-size: 13px; font-weight: 750; }
+.support-card a:first-child { background: var(--v8-navy); color: #fff; }
+.support-card a:hover { background: var(--v8-gold); border-color: var(--v8-gold); color: var(--v8-navy); }
+
+@media (max-width: 960px) {
+  .support-heading { grid-template-columns: 1fr; gap: 22px; }
+}
+
+@media (max-width: 640px) {
+  .v8-2 .v8-hero .slide-1 { background-position: center, 47% center; }
+  .v8-2 .v8-hero::after { background: rgba(16, 43, 69, .72); }
+  .v8-support { padding: 80px 0; }
+  .support-grid { grid-template-columns: 1fr; margin-top: 38px; }
+  .support-card { padding: 28px 22px; }
+  .support-card > span { min-height: 0; }
+}

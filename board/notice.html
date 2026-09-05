@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 게시글은 board-list 안의 li 를 복사/수정하여 관리합니다. 현재 글은 예시입니다. -->
+  <title>공지사항 | 넥서스엔</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../">
+
+  <div id="header"></div>
+
+  <section class="page-hero">
+    <p class="p-eyebrow">Notice &amp; News</p>
+    <h1>공지사항</h1>
+    <p class="breadcrumb"><a href="../index.html">HOME</a><span class="sep">›</span>게시판<span class="sep">›</span>공지사항</p>
+  </section>
+  <div id="page-tabs"></div>
+
+  <main class="sub-content">
+    <div class="container">
+      <ul class="board-list reveal">
+        <li>
+          <a href="#">
+            <span class="b-badge">공지</span>
+            <span class="b-title">넥서스엔 홈페이지가 새롭게 오픈했습니다.</span>
+            <span class="b-date">2026-08-14</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="b-badge">공지</span>
+            <span class="b-title">근로자파견사업 허가 취득 안내 (허가번호 2026-386)</span>
+            <span class="b-date">2026-08-01</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="b-badge">안내</span>
+            <span class="b-title">증명서 발급 요청 절차 안내</span>
+            <span class="b-date">2026-07-15</span>
+          </a>
+        </li>
+      </ul>
+      <div class="notice-note reveal" style="margin-top:30px">
+        <b>안내</b> 현재 게시글은 예시입니다. 정적 사이트 특성상 게시글은 이 파일(board/notice.html)을 직접 수정해 관리하며,
+        게시글이 많아지면 게시판 서비스(블로그, 노션 등) 연동 또는 CMS 도입을 권장합니다.
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
